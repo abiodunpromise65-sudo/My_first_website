@@ -1,1 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn Python</title>
+  <style>
+    body { font-family: system-ui, sans-serif; background: #0f172a; color: #f8fafc; margin: 0; padding: 2rem; }
+    .container { max-width: 800px; margin: 0 auto; }
+    .card { background: #1e293b; padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem; border: 1px solid #334155; }
+    h1 { color: #38bdf8; text-align: center; }
+    h2 { color: #f1f5f9; margin-top: 0; }
+    pre { background: #020617; padding: 1rem; border-radius: 6px; color: #38bdf8; overflow-x: auto; }
+    p { color: #94a3b8; line-height: 1.5; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Interactive Python Portal</h1>
+    {% for lesson in lessons %}
+      <div class="card">
+        <h2>{{ lesson.id }}. {{ lesson.title }}</h2>
+        <p>{{ lesson.explanation }}</p>
+        <pre><code>{{ lesson.code }}</code></pre>
+      </div>
+    {% endfor %}
+  </div>
+</body>
+</html>
 
